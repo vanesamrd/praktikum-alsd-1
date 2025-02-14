@@ -9,7 +9,6 @@ public class Pemilihan23 {
         System.out.println("|     Program Menghitung Nilai Akhir    |");
         System.out.println(" =======================================");
 
-         // input nilai tugas, kuis, UTS, dan UAS
          System.out.print("Masukkan nilai tugas  : ");
          int nilaiTugas = input23.nextInt();
  
@@ -22,27 +21,22 @@ public class Pemilihan23 {
          System.out.print("Masukkan nilai UAS    : ");
          int nilaiUAS = input23.nextInt();
  
-         // konversi nilai huruf
          String nilaiHuruf = " ";
          String keterangan = " ";
  
-         // menghitung rata-rata nilai akhir
          double nilaiAkhir = 0.2 * nilaiTugas + 0.2 * nilaiKuis + 0.3 * nilaiUTS + 0.3 * nilaiUAS;
  
          
          System.out.println("========================================");
          System.out.println("========================================");
  
-         // output hasil
          System.out.println("Nilai Akhir: " + nilaiAkhir);
  
-         // mengecek kondisi setelah menghitung nilai akhir
          if (nilaiTugas >= 0 && nilaiTugas <= 100 &&
                  nilaiKuis >= 0 && nilaiKuis <= 100 &&
                  nilaiUTS >= 0 && nilaiUTS <= 100 &&
                  nilaiUAS >= 0 && nilaiUAS <= 100) {
  
-             // konversi nilai
              if (nilaiAkhir > 80 && nilaiAkhir <= 00) {
                  nilaiHuruf = "A";
                  keterangan = "LULUS";
@@ -66,7 +60,6 @@ public class Pemilihan23 {
                  keterangan = "TIDAK LULUS";
              }
  
-             // output nilai huruf dan keterangan
              System.out.println("Nilai Huruf: " + nilaiHuruf);
              System.out.println("Keterangan: " + keterangan);
  
