@@ -10,8 +10,15 @@ public class MahasiswaMain23 {
 
         mhs1.tampilkanInformasi();
         mhs1.ubahKelas("SI 2K");
-        mhs1.updateIpk(3.5);
+        mhs1.updateIpk(3.60);
         mhs1.tampilkanInformasi();
+        
+        Mahasiswa23 mhs2 = new Mahasiswa23("Annisa Nabila","2141720160", 3.25,"TI 2L");
+        mhs2.updateIpk(5);
+        mhs2.tampilkanInformasi();
+        
+        Mahasiswa23 mhsVanesa = new Mahasiswa23("Vanesa Mardiana Putri", "242107020129", 3.90, "TI 1B");
+        mhsVanesa.tampilkanInformasi();
 
     }
 }
