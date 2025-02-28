@@ -24,6 +24,14 @@ public class MataKuliahDemo23 {
             
             arrayOfMataKuliah23[i] = new MataKuliah23(kode, nama, sks, jumlahJam);
         }
-    }   
-    
+
+        for(int i = 0; i < 3; i++) {
+            System.out.println("Data Matakuliah ke-" + (i + 1));
+            System.out.println("Kode\t: " + arrayOfMataKuliah23[i].kode);
+            System.out.println("Nama\t: " + arrayOfMataKuliah23[i].nama);
+            System.out.println("SKS\t: " + arrayOfMataKuliah23[i].sks);
+            System.out.println("Jumlah Jam\t: " + arrayOfMataKuliah23[i].jumlahJam);
+            System.out.println("----------------------------------------------");
+        }
+    }
 }
