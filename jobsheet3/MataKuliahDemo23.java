@@ -4,34 +4,23 @@ import java.util.Scanner;
 public class MataKuliahDemo23 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        MataKuliah23[] arrayOfMataKuliah23 = new MataKuliah23[3];
-        String kode, nama, dummy;
-        int sks, jumlahJam;
+        System.out.print("Masukkan jumlah matka kuliah yang ingin didaftarakan: ");
+        int n = sc.nextInt();
+        sc.nextLine();
 
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Masukkan Data Matakuliah ke-" + (i + 1));
-            System.out.println("Kode\t\t: ");
-            kode = sc.nextLine();
-            System.out.println("Nama\t\t: ");
-            nama = sc.nextLine();
-            System.out.println("sks\t\t: ");
-            dummy = sc.nextLine(); 
-            sks = Integer.parseInt(dummy);
-            System.out.println("Jumlah Jam\t: ");
-            dummy = sc.nextLine();
-            jumlahJam = Integer.parseInt(dummy);
-            System.out.println("-------------------------------------");
-            
-            arrayOfMataKuliah23[i] = new MataKuliah23(kode, nama, sks, jumlahJam);
+        MataKuliah23 arrayOfMataKuliah[] = new MataKuliah23[n];
+        String kode = null;
+        String nama = null;
+        String dummy = null;
+        int sks = 0, jumlahJam = 0;
+
+        for (int i = 0; i < n; i++) {
+            arrayOfMataKuliah[i] = new MataKuliah23(kode, nama, sks, jumlahJam);
+            arrayOfMataKuliah[i].tambahData(kode, nama, dummy, sks, jumlahJam, i);
         }
 
-        for(int i = 0; i < 3; i++) {
-            System.out.println("Data Matakuliah ke-" + (i + 1));
-            System.out.println("Kode\t: " + arrayOfMataKuliah23[i].kode);
-            System.out.println("Nama\t: " + arrayOfMataKuliah23[i].nama);
-            System.out.println("SKS\t: " + arrayOfMataKuliah23[i].sks);
-            System.out.println("Jumlah Jam\t: " + arrayOfMataKuliah23[i].jumlahJam);
-            System.out.println("----------------------------------------------");
+        for (int i = 0; i < n; i++) {
+            arrayOfMataKuliah[i].cetakInfo(i, arrayOfMataKuliah);
         }
-    }
-}
+    }   
+}    
