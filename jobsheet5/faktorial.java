@@ -3,10 +3,8 @@ package jobsheet5;
 public class faktorial {
     int faktorialBF(int n){
         int faktor =1;
-        int i =1;
-        while (i <= n) {
-            faktor *= i;
-            i++;
+        for (int i = 0; i <=n; i++) {
+         faktor = faktor * i;   
         }
         return faktor;
     }
