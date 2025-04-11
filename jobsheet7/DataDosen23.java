@@ -46,7 +46,7 @@ public class DataDosen23 {
         }
     }
 
-    void PencarianDataSequential20() {
+    void PencarianDataSequential23() {
         Scanner input = new Scanner(System.in);
         System.out.println("Masukkan nama dosen yang ingin dicari: ");
         String nama = input.nextLine();
@@ -74,7 +74,7 @@ public class DataDosen23 {
         }
     }
 
-    void PencarianDataBinary20() {
+    void PencarianDataBinary23() {
         Scanner input = new Scanner(System.in);
         System.out.println("Masukkan nama dosen yang ingin dicari: ");
         String nama = input.nextLine();
