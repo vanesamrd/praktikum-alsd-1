@@ -92,8 +92,10 @@ public class MahasiswaBerprestasi23 {
                 mid=(left+right)/2;
                 if(cari ==listMhs[mid].ipk){
                     return mid;
-                }else if (listMhs[mid].ipk>cari){
-                    return findBinarySearch(cari, left, mid-1);
+                //}else if (listMhs[mid].ipk>cari){
+                //    return findBinarySearch(cari, left, mid-1);
+                }else if (listMhs[mid].ipk<cari){                   //modifikasi no.4
+                    return findBinarySearch(cari, left, mid-1);     //modifikasi no.4           
                 }else {
                     return findBinarySearch(cari, mid+1, right);
                 }
@@ -101,4 +103,6 @@ public class MahasiswaBerprestasi23 {
             return -1;
         }
 
-}
+
+
+    }

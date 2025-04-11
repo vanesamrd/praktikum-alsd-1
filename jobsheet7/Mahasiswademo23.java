@@ -6,7 +6,9 @@ public class Mahasiswademo23 {
      public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         MahasiswaBerprestasi23 list = new MahasiswaBerprestasi23();
-        int jumMhs=5;
+        //int jumMhs=5;
+        int jumMhs = sc.nextInt();
+        sc.nextLine();
 
         for (int i = 0; i < jumMhs; i++) {
             System.out.println("Masukkan Data Mahasiswa ke-" + (i + 1));
@@ -35,10 +37,8 @@ public class Mahasiswademo23 {
             //double posisi = list.sequentialSearching(cari);
             //int pss= (int)posisi;
             //list.tampilPosisi(cari, pss);
-            //list.tampilDataSearch(cari, pss);
+            //```java
 
-    
-      
 
         //melakukan data binary
         System.out.println("------------------------------------------");
