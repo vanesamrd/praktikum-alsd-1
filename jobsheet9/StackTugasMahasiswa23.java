@@ -1,6 +1,5 @@
-package jobsheet9;
-
 public class StackTugasMahasiswa23 {
+    
     Mahasiswa23[] stack;
     int top;
     int size;
@@ -62,4 +61,5 @@ public class StackTugasMahasiswa23 {
         }
         System.out.println("");
     }
+
 }
