@@ -27,7 +27,7 @@ public class StackTugasMahasiswa23 {
     }
 
     public void push(Mahasiswa23 mhs) {
-        if (isFull()) {
+        if (!isFull()) {
             top++;
             stack[top] = mhs;
         } else {
@@ -45,19 +45,18 @@ public class StackTugasMahasiswa23 {
             return null;
         }
     }
-
     public Mahasiswa23 peek() {
         if (!isEmpty()) {
             return stack[top];
         } else {
-            System.out.println("Stack kosong! Tidak ada tugas yang dikumpulkan.");
+            System.out.println("Stack kosong! Tidak ada tugas untuk dinilai.");
             return null;
         }
     }
 
     public void print() {
         for (int i = 0; i <= top; i++) {
-            System.out.println(stack[i].nama + "\t" + stack[i].nim + "\t" + stack[i].kelas);
+            System.out.println(stack[i].nama + "\t" + stack[i].nim + "\t" + stack[i].kelas);  
         }
         System.out.println("");
     }

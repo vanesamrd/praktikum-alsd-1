@@ -36,9 +36,7 @@ public class MahasiswaDemo23 {
                         System.out.print("Masukkan nilai (0-100): ");
                         int nilai = scan.nextInt();
                         dinilai.nilai = nilai;
-                        System.out.printf("Nilai Tugas %s adalah %d\n", dinilai.nama, dinilai.nilai);
-                    } else {
-                        System.out.println("Tidak ada tugas yang dapat dinilai.");
+                        System.out.printf("Nilai Tugas %s adalah %d\n", dinilai.nama, nilai);
                     }
                     break;
 
@@ -46,8 +44,6 @@ public class MahasiswaDemo23 {
                     Mahasiswa23 lihat = stack.peek();
                     if (lihat != null) {
                         System.out.println("Tugas terakhir dikumpulkan oleh " + lihat.nama);
-                    } else {
-                        System.out.println("Tidak ada tugas yang dapat dilihat.");
                     }
                     break;
 
