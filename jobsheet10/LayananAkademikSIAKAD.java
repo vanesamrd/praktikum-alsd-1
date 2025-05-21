@@ -11,11 +11,11 @@ public class LayananAkademikSIAKAD {
             System.out.println("\n=== Menu Antrian Layanan Akademik ===");
             System.out.println("1. Tambah Mahasiswa ke Antrian");
             System.out.println("2. Layani Mahasiswa");
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
+            System.out.println("3. Lihat Mahasiswa Terdepan");
+            System.out.println("4. Lihat Semua Antrian");
+            System.out.println("5. Jumlah Mahasiswa dalam Antrian");
+            System.out.println("0. Keluar");
+            System.out.println("Pilihan menu: ");
             pilihan = sc.nextInt(); sc.nextLine();
            
             switch (pilihan) {
