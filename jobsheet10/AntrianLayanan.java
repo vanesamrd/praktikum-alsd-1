@@ -62,7 +62,7 @@ public class AntrianLayanan {
         for (int i = 0; i < size; i++) {
             int index = (front + 1) % max;
             System.out.print((i+1) + ".");
-            data[index].tampilkanData();;
+            data[index].tampilkanData();
         }
     }
 
