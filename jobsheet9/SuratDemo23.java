@@ -12,6 +12,8 @@ public class SuratDemo23 {
             System.out.println("2. Proses Surat Izin");
             System.out.println("3. Lihat Surat Izin Terakhir");
             System.out.println("4. Cari Surat");
+            System.out.println("5. Tugas Terbawah");
+            System.out.println("6. Jumlah Tugas Terkumpul");
             System.out.println("Pilih : ");
             pilih = input.nextInt();
 
