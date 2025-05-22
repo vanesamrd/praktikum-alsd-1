@@ -52,17 +52,17 @@ public class AntrianLayanan {
         }
     }
 
-    public void tampilkanSemua() {
+   public void tampilkanSemua() {
         if (isEmpty()) {
-            System.out.println("Antrian kosong.");
-            return;
+        System.out.println("Antrian kosong.");
+        return;
         }
-        System.out.println("Daftar Mahasiswa dalam Antrian: ");
+        System.out.println("Daftar Mahasiswa dalam Antrian");
         System.out.println("NIM - NAMA - PRODI - KELAS");
         for (int i = 0; i < size; i++) {
-            int index = (front + 1) % max;
-            System.out.print((i+1) + ".");
-            data[index].tampilkanData();
+        int index = (front + i) % max;
+        System.out.print((i + 1) + ". ");
+        data[index].tampilkanData();
         }
     }
 
