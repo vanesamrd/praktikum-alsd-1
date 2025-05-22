@@ -10,7 +10,7 @@ public class QueueMain {
         System.out.println("4. Peek");
         System.out.println("5. Clear");
         System.out.println("----------------");
-    }
+    } 
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

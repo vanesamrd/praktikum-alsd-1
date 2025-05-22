@@ -1,7 +1,7 @@
 package jobsheet10;
 import java.util.Scanner;
 
-public class LayananAkademikSIAKAD {
+public class LayananAkademikSIAKAD { 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         AntrianLayanan antrian = new AntrianLayanan(5);
@@ -46,6 +46,12 @@ public class LayananAkademikSIAKAD {
                     break;
                 case 5:
                     System.out.println("Jumlah dalam antrian: " + antrian.getJumlahAntrian());
+                    break;
+                case 6:
+                    Mahasiswa terakhir = antrian.lihatAkhir();
+                    if (terakhir != null) {
+                        System.out.println("Mahasiswa di belakang antrian: " + terakhir.nama);
+                    }
                     break;
                 case 0:
                     System.out.println("Terima kasih.");

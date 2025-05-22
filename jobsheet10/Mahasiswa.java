@@ -4,7 +4,7 @@ public class Mahasiswa {
     String nim;
     String nama;
     String prodi;
-    String kelas;
+    String kelas; 
 
     public Mahasiswa(String nim, String nama, String prodi, String kelas) {
         this.nim = nim;

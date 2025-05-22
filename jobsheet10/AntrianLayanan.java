@@ -11,7 +11,7 @@ public class AntrianLayanan {
         this.rear = -1;
         this.size = 0;
     }
-
+ 
     public boolean isFull() {
         return size == max;
     }
@@ -68,5 +68,13 @@ public class AntrianLayanan {
 
     public int getJumlahAntrian() {
         return size;
+    }
+
+    public Mahasiswa lihatAkhir() {
+        if (isEmpty()) {
+            System.out.println("Antrian kosong!");
+            return null;
+        }
+        return data[rear];
     }
 }
