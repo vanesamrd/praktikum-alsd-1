@@ -15,4 +15,5 @@ public class Mahasiswa23 {
         this.nilai = nilai;
     }
     
+    
 }
