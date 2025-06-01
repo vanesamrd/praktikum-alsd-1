@@ -36,15 +36,15 @@ public class SLLMain23 {
         Scanner sc = new Scanner(System.in);
         String jawab = "";
         do {
-            System.out.println("Seluruh Data: ");
-            sll.print();
-            System.out.print("Apakah ingin menambah data baru?: ");
-            jawab = sc.nextLine();
+           System.out.println("Seluruh Data: ");
+           sll.print();
+           System.out.print("Apakah ingin menambah data baru?: ");
+           jawab = sc.nextLine();
 
-            System.out.print("Masukkan Nama Mahasiswa : ");
-            String nama = sc.nextLine();
-            System.out.print("Masukkan NIM Mahasiswa : ");
-            String nim = sc.nextLine();
+           System.out.print("Masukkan Nama Mahasiswa : ");
+           String nama = sc.nextLine();
+           System.out.print("Masukkan NIM Mahasiswa : ");
+           String nim = sc.nextLine();
             System.out.print("Masukkan Kelas Mahasiswa : ");
             String kelas = sc.nextLine();
             System.out.print("Masukkan IPK Mahasiswa : ");
@@ -89,3 +89,4 @@ public class SLLMain23 {
         } while (jawab.equalsIgnoreCase("ya") || jawab.equalsIgnoreCase("y"));
     }
 }
+
