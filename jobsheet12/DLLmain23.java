@@ -54,6 +54,12 @@ public class DLLmain23 {
                 System.out.println("Data tidak ditemukan.");
             }
         }
+        case 7 -> {
+            System.out.print("Masukkan NIM: ");
+            String kyeNim = scan.nextLine();
+            Mahasiswa23 mhs = inputMahasiswa(scan);
+            list.insertAfter(kyeNim, mhs);
+        }
       }
       
     } while(pilihan !=0);

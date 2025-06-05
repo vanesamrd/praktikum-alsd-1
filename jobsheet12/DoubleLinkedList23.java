@@ -77,6 +77,7 @@ public class DoubleLinkedList23 {
         if (isEmpty()) {
             System.out.println("List kosong, tidak bisa dihapus");
         }
+        Mahasiswa23 deletedData = head.data;
         if (head == tail) {
             Mahasiswa23 data = head.data;
             head = tail = null;
@@ -85,6 +86,7 @@ public class DoubleLinkedList23 {
             head = head.next;
             head.prev = null;            
         }
+        System.out.println("Data sudah berhasil dihapus. Data yang terhapus adalah " + deletedData.nama);
     }
   
     public void removeLast() {
@@ -112,4 +114,121 @@ public class DoubleLinkedList23 {
         return null; 
     }
 
+    void add(Mahasiswa23 data, int index) {
+        if (index == 0) {
+            addFirst(data);
+            return;
+        } 
+        
+        Node23 temp = head;
+        for (int i = 0; i < index - 1; i++) {
+        if (temp == null) {
+        System.out.println("Index melebihi panjang list");
+        return;
+        }
+        temp = temp.next;
+        }
+        
+        if (temp.next == null) {
+            addLast(data);
+            return;
+        }
+        
+        Node23 newNode = new Node23(data);
+        temp.next.prev = newNode;
+        newNode.next = temp.next;
+        temp.next = newNode;
+        newNode.prev = temp;
+    }
+    
+    void removeAfter(String key) {
+        if (isEmpty()) {
+            System.out.println("List kosong, tidak bisa dihapus");
+            return;
+        } 
+        Node23 temp = head;
+
+        while (temp != null && !temp.data.nama.equalsIgnoreCase(key)) {
+        temp = temp.next;
+        }
+
+        if (temp == null || temp.next == null) {
+        System.out.println("Node setelah \"" + key + "\" tidak ditemukan atau tidak ada");
+        return;
+        }
+
+        temp.next.prev = temp;
+        temp.next = temp.next.next;
+    
+    }
+
+    void remove(int index) {
+        if (isEmpty()) {
+            System.out.println("List kosong, tidak bisa dihapus");
+            return;
+        } 
+        if (index < 0) {
+            System.out.println("Index tidak valid");
+            return;
+        }
+        if (index == 0) {
+            removeFirst();
+            return;
+        } 
+        Node23 temp = head;
+        for(int i = 0; i < index; i++) {
+        if (temp == null) {
+            System.out.println("Index melebihi panjang list");
+            return;
+        }
+            temp = temp.next;
+        }
+        if (temp.next == null) {
+            removeLast();
+            return;
+        }
+        temp.next.prev = temp.prev;
+        temp.prev.next = temp.next;
+    }
+
+    Mahasiswa23 getFirst() {
+        if (isEmpty()) {
+            return null;
+        }
+        return head.data;
+    }
+
+    Mahasiswa23 getLast() {
+        if (isEmpty()) {
+            return null;
+        }
+
+        return tail.data;
+    }
+
+    Mahasiswa23 getIndex(int index) {
+        if (isEmpty()) {
+            return null;
+        }
+        Node23 temp = head;
+        for(int i = 0; i < index; i++) {
+        if (temp == null) {
+            System.out.println("Index melebihi panjang list");
+            return null;
+        }
+            temp = temp.next;
+        }
+        return temp.data;
+    }
+
+    int getSize() {
+        int counter = 0;
+        Node23 temp = head;
+        while (temp != null) {
+            temp = temp.next;
+            counter++;
+        }
+
+        return counter;
+    }
 }
