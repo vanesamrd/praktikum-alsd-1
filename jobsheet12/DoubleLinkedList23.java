@@ -62,10 +62,54 @@ public class DoubleLinkedList23 {
   }
 
   public void print() {
-    Node23 current = head;
-    while (current != null) {
-        current.data.tampil();
-        current = current.next;
-    }
+    if (isEmpty()) {
+        System.out.println("Linked List Kosong");
+    } else {
+        Node23 current = head;
+        while (current != null) {
+            current.data.tampil();
+            current = current.next;
+        }
+    }    
   }
+
+   public void  removeFirst() {
+        if (isEmpty()) {
+            System.out.println("List kosong, tidak bisa dihapus");
+        }
+        if (head == tail) {
+            Mahasiswa23 data = head.data;
+            head = tail = null;
+        } else {
+            Mahasiswa23 data = head.data;
+            head = head.next;
+            head.prev = null;            
+        }
+    }
+  
+    public void removeLast() {
+        if (isEmpty()) {
+            System.out.println("List kosong, tidak bisa dihapus");
+        } 
+        if (head == tail) {
+            Mahasiswa23 data = tail.data;
+            head = tail = null;
+        } else {
+            Mahasiswa23 data = tail.data;
+            tail = tail.prev;
+            tail.next = null;
+        }
+    }
+
+   public Node23 search(String nim) {
+        Node23 current = head;
+        while (current != null) {
+            if (current.data.nim.equals(nim)) {
+                return current; 
+            }
+            current = current.next;
+        }
+        return null; 
+    }
+
 }
